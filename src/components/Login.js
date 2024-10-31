@@ -46,6 +46,7 @@ function Login() {
         } catch (error) {
             console.error('Error logging in:', error);
             setErrorMessage('An error occurred. Please try again.');
+            alert("try again")
         }
 
         // Clear email and password fields
