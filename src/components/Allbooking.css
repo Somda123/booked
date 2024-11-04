@@ -71,14 +71,18 @@
 
 .booking-table {
     width: 100%;
+    /* width: 50vh; */
     border-collapse: collapse;
     margin-top: 40px;
+    overflow: auto;
+    /* border: red 5px solid; */
+
 }
 
 .Allbooking-table-header {
     background-color: #030335;
     padding: 10px;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     font-weight: bold;
     text-align: left;
@@ -168,7 +172,7 @@
     }
     .booking-table {
         width: 100%;
-       
+       /* width: 100vh; */
         overflow: auto;
     }
 }

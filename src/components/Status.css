@@ -1,36 +1,26 @@
-.qr-code-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+/* Allbooking.css or Status.css */
+.responsive-swal-popup {
+    font-size: 1rem; /* Default font size */
 }
 
-.modal-content {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
+@media (max-width: 768px) {
+    .responsive-swal-popup {
+        font-size: 0.9rem; /* Smaller font for mobile */
+    }
+
+    .swal2-popup .swal2-image {
+        width: 80%; /* Adjust image width for smaller screens */
+        height: auto; /* Maintain image aspect ratio */
+    }
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
+@media (max-width: 480px) {
+    .responsive-swal-popup {
+        font-size: 0.8rem; /* Even smaller font for very small screens */
+    }
 
-.qr-code-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    .swal2-popup .swal2-image {
+        width: 100%; /* Full-width image for small mobile devices */
+        height: auto;
+    }
 }
