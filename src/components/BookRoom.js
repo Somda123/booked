@@ -1410,7 +1410,7 @@ const AddBooking = ({ onAddCustomer = () => {} }) => {
                     </tbody>
                 </table>
                 <button type="submit" className="add-booking-button" disabled={isLoading}>
-                    {isLoading ? "Booking...." : "Add Book Now"}
+                    {isLoading ? "Booking...." : "Book Now"}
                 </button>
             </form>
         </div>
