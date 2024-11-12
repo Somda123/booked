@@ -73,6 +73,7 @@ const Dashboard = () => {
     return (
         <div className="dashboard-container">
             <h2 className="dashboard-heading">Hello Sir!</h2>
+            <h2 className="dashboard-heading">Today's Data!</h2>
             
             <label htmlFor="location-select">Select Location:</label>
             <select 
@@ -103,7 +104,7 @@ const Dashboard = () => {
                     <tr>
                         <th>Date</th>
                         <th>Accepted Bookings</th>
-                        <th>Rooms Available</th>
+                        <th>Forms Available</th>
                         <th>Maximum Rooms</th>
                     </tr>
                 </thead>
