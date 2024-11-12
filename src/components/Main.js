@@ -71,7 +71,7 @@ export default Main;
 
 
 
-
+//old
 // import React from 'react';
 // import Header from './Header';
 // import ImageSlider from './ImageSlider';
