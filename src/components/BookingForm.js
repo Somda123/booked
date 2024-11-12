@@ -48,7 +48,7 @@ const BookingForm = () => {
       const bookings = data.rooms.filter(
         (room) => room.Location === selectedLocation && room.Status === "Accepted"
       );
-      console.log(bookings);
+      // console.log('bookings: ',bookings);
       
       // Initialize rooms
       const roomStatuses = Array.from({ length: roomsAtLocation }, (_, i) => ({
@@ -56,7 +56,7 @@ const BookingForm = () => {
         status: 'Available',
         available: true,
       }));
-  console.log(roomStatuses);
+  // console.log('roomStatuses:',roomStatuses);
   
       bookings.forEach((booking) => {
         const bookingStart = new Date(booking["Check In Time"]);
@@ -71,7 +71,7 @@ const BookingForm = () => {
   
         if (isOverlapping  ) {
           let availableRooms = roomStatuses.filter((room) => room.available);
-          console.log(availableRooms);
+          // console.log(availableRooms);
           
           availableRooms.slice(0, bookedRooms).forEach((room) => {
             room.status = 'Booked';

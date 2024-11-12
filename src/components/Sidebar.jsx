@@ -60,7 +60,7 @@ const Sidebar = ({ onSidebarClick }) => {
                         </ul>
                     </li>
 
-                    <li className={activeMenu === 'rooms' ? 'active' : ''} onClick={toggleRoomDropdown}>
+                    {/* <li className={activeMenu === 'rooms' ? 'active' : ''} onClick={toggleRoomDropdown}>
                         <i className="fa fa-bed"></i>
                         <span>{isSidebarOpen && 'Room'}</span>
                         <i className={`fa ${showRoomDropdown ? 'fa-chevron-down' : 'fa-chevron-right'}`}></i>
@@ -70,7 +70,7 @@ const Sidebar = ({ onSidebarClick }) => {
                                 <span>{isSidebarOpen && 'All Rooms'}</span>
                             </li>
                         </ul>
-                    </li>
+                    </li> */}
 
                     <li className={activeMenu === 'customers' ? 'active' : ''} onClick={() => handleMenuClick('customers')}>
                         <i className="fa fa-users"></i>
