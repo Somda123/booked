@@ -27,7 +27,10 @@
     background-color: #f9f9f9;
 }
 
-
+/* .filter-section{
+    display: flex;
+    height: 60px;
+} */
 
 
 
@@ -39,29 +42,13 @@
     padding: 8px;
     text-align: left;
 }
-
 /* Font size adjustment for smaller screens (tablets, phones) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .booking-table th, .booking-table td {
         font-size: 14px; /* Smaller font size for tablets */
         padding: 6px; /* Adjust padding to keep spacing nice */
     }
 }
-
-@media (max-width: 480px) {
-    .booking-table th, .booking-table td {
-        font-size: 12px; /* Even smaller font size for mobile phones */
-        padding: 4px; /* Adjust padding for small screens */
-    }
-}
-
-
-
-
-
-
-
-
 
 .all-head {
     color: rgb(1, 1, 18);
@@ -105,6 +92,93 @@
     object-fit: cover;
     border-radius: 5px;
 }
+/* For screen widths from 769px to 1157px */
+@media (min-width: 769px) and (max-width: 1157px) {
+    .content {
+        overflow-x: hidden;
+    }
+
+    .booking-list {
+        overflow: auto;
+    }
+
+    .all-head {
+        margin: 0px;
+    }
+
+    .booking-table {
+        width: 100%;
+        margin-left: auto;
+        margin-top: 30px;
+        overflow: auto;
+    }
+
+    .Allbooking-table-header th {
+        font-size: 12px; /* Slightly larger font size for this range */
+    }
+
+    .Allbooking-table-data {
+        padding: 5px;
+        text-align: center;
+        font-size: 12px; /* Adjusted for better visibility */
+    }
+
+    .id-image {
+        width: 60px; /* Slightly larger image */
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    .content{
+        overflow-x: hidden;
+    }
+    .booking-list {
+       
+        overflow: auto;
+    }
+
+    .all-head {
+       
+        margin: 0px;
+    }
+
+
+    .booking-table {
+        width: 100%;
+
+        margin-left: auto;
+        margin-top: 30px;
+        overflow: auto;
+    }
+
+    .Allbooking-table-header th {
+        
+        font-size: 10px;
+        
+    }
+
+    .Allbooking-table-data {
+        padding: 0px;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .id-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+
+
     
 @media (max-width:768px){
     .content {
@@ -140,6 +214,8 @@
 
 
     .booking-table {
+        width: 100%;
+
         margin-left: auto;
         margin-top: 30px;
         overflow: auto;
@@ -174,5 +250,31 @@
         width: 100%;
        /* width: 100vh; */
         overflow: auto;
+    }
+}
+
+
+
+
+/* Spinner Styles */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }

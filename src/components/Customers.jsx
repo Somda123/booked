@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import "../components/Allbooking.css";
+import Spinner from '../components/Spinner'; 
 
 const Customers = () => {
     const [customers, setCustomers] = useState([]);
@@ -71,7 +72,9 @@ const Customers = () => {
         filterCustomers(customers, searchQuery, date);
     };
 
-    if (loading) return <div>Loading...</div>;
+    // if (loading) return <div>Loading...</div>;
+    if (loading) return <Spinner />;
+
     if (error) return <div>{error}</div>;
 
     return (
@@ -98,7 +101,12 @@ const Customers = () => {
             </div>
 
             <table className='booking-table'>
-                <thead className='Allbooking-table-header'>
+                <thead className='Allbooking-table-header'  style={{ 
+        position: 'sticky', 
+        top: 0, 
+        backgroundColor: '#f1f1f1', 
+        zIndex: 1 
+    }}>
                     <tr>
                         <th>User ID</th>
                         <th>Check-In Date</th>
